@@ -26,6 +26,11 @@ export default function SlideUp({ children, offset = "0px" }: Props) {
     if (ref.current) {
       observer.observe(ref.current)
     }
+
+    return () => {
+      // Cleanup observer when component unmounts
+      observer.disconnect();
+    };
   }, [offset,ref])
 
   return (
