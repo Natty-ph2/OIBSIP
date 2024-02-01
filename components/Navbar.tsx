@@ -40,8 +40,13 @@ const Navbar = () => {
         const homeElement = document.getElementById('home');
         if (homeElement) {
             homeElement.scrollIntoView({
-                behavior: 'smooth',
+                behavior: "smooth",
+                block: "start",
+                inline: "nearest",
             });
+            // homeElement.scrollIntoView({
+            //     behavior: 'smooth',
+            // });
         }
     };
 
@@ -51,7 +56,7 @@ const Navbar = () => {
             <div>
                 <div className="flex items-center justify-between py-4">
 
-                <h2 id="home" className="text-3xl  font-burtons cursor-pointer"
+                <h2 className="text-3xl  font-burtons cursor-pointer"
                            onClick={scrollToHome}
                 >
                     Natnael Desta
