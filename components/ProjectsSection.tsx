@@ -21,7 +21,7 @@ const projects = [
         name: "portfolia",
         description: "a personal portfolio",
         image: "/portfolio.png",
-        github: "",
+        github: "https://github.com/Natty-ph2/nextjs-portfolio",
     },
     {
         name: "Fullstack music app",
