@@ -34,18 +34,33 @@ const Navbar = () => {
     const currentTheme = theme === "system" ? systemTheme : theme
     const [navbar, setNavbar] = useState(false);
 
+
+
+    const scrollToHome = () => {
+        const homeElement = document.getElementById('home');
+        if (homeElement) {
+            homeElement.scrollIntoView({
+                behavior: 'smooth',
+            });
+        }
+    };
+
     
     return <header className="w-full sm:px-20  mx-auto px-4 fixed top-0 z-50 shadow bg-white dark:bg-stone-900 dark:border-b dark:border-stone-600">  
         <div className="justify-between md:items-center md:flex">
             <div>
                 <div className="flex items-center justify-between py-4">
-                    <Link to="home">
 
-                    <h2 className="text-3xl  font-burtons cursor-pointer">Natnael Desta</h2>
-                       {/* <div className="md:py-5 md:block">
+                <h2 id="home" className="text-3xl  font-burtons cursor-pointer"
+                           onClick={scrollToHome}
+                >
+                    Natnael Desta
+                    </h2>
+                    {/* <Link to="home">
+                       <div className="md:py-5 md:block">
                           <h2 className="text-3xl  font-burtons cursor-pointer">Natnael Desta</h2>
-                       </div> */}
-                    </Link>
+                       </div>
+                    </Link> */}
                   
                   <div className="md:hidden">
                     <button onClick={() => setNavbar(!navbar)}>{navbar ? <IoMdClose /> : <IoMdMenu size={30} />}</button>
