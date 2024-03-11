@@ -37,7 +37,7 @@ const AboutSection = () => {
 
                         <p>
                         I graduated from Adama Science and Technology University in 2022 with BSC in Computer Science and 
-                        engineering and have been working in the field ever since.
+                        engineering and have been working in the field ever since and I am intern at OIBSIB infobytes.
                         </p>
                         <br />
 
