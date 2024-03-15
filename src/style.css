@@ -1,0 +1,94 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+
+html, body {
+    height: 100%;
+  }
+
+
+body {
+    
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  background: rgb(51, 130, 182);
+}
+
+.calc-bg {
+    
+    margin: auto;
+    width: 520px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    padding: 1rem;
+    border-radius: 13px;
+   
+    
+  
+}
+.calc-container{
+    display: grid;
+    /* margin-top: 9rem; */
+    grid-template-columns: repeat(5, 6rem);
+    grid-template-rows: minmax(7rem, auto) repeat(5, 6rem);
+    justify-content: center;
+    border-radius: 9px;
+   
+    
+    
+  
+}
+
+.spanTwo {
+    grid-column: span 2;
+    background: rgb(77, 77, 192);
+}
+
+.result {
+    grid-column: 1 / -1;
+    background-color: rgb(168, 194, 212);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding: 0.75rem;
+    word-wrap: break-word;
+    word-break: break-all;
+    border-radius: 8px;
+    margin: 4px;
+}
+
+.result .firstOperand {
+    color: rgb(77, 77, 192);
+    font-size: 1.5rem;
+}
+
+.result .secondOperand {
+    color: black;
+    font-size: 2.5rem;
+}
+
+.calc-container > button {
+    cursor: pointer;
+    font-size: 2rem;
+    border: 1px solid white;
+    border-radius: 8px;
+    outline: none;
+    background-color: rgb(174, 200, 218);
+    margin: 4px;
+
+}
+
+.calc-container > button:hover {
+    background-color: rgba(199, 220, 235, .7);
+}
+
+.calc-container .spanTwo {
+    background-color: rgb(116, 116, 219);
+}
